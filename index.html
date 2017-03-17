@@ -5,58 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        html,body{
-	        min-width: 320px;
-	        max-width: 640px;
-	        margin: 0 auto;
-        }
-        #box{
-            position: relative;
-            /*overflow: hidden;*/
-        }
-        #ulList{
-            position: relative;
-        }
-        #ulList li{
-            position: absolute;
-            width: 100%;
-            left: 0;
-            top: 0;
-            /*-webkit-transform: translateX(-100%);
-            transform: translateX(-100%);*/
-        }
-        #olList{
-            position: absolute;
-            left: 0;
-            bottom: 10px;
-            width: 100%;
-            text-align: center;
-        }
-        #olList li{
-            width: 5px;
-            height: 5px;
-            border: 1px solid #ccc;
-            margin: auto 5px;
-            border-radius: 50%;
-            display: inline-block;
-        }
-        #olList .current{
-            background-color: #fff;
-        }
-        img {
-	        width: 100%;
-	        height: auto;
-	        width: auto\9; /* ie8 */
-	        display: block;
-	        -ms-interpolation-mode: bicubic;/*为了照顾ie图片缩放失真*/
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
 <body>
     <div id="box">
@@ -70,28 +19,6 @@
         </ul>
         <ol id="olList"></ol>
     </div>
-    <script>
-        window.onload = function(){
-            var box = document.getElementById('box');
-            var ul = document.getElementById('ulList');
-            var ulList = ul.getElementsByTagName('li');
-            var ol = document.getElementById('olList');
-            console.log(ulList[0].offsetHeight);
-
-            ul.style.height = ulList[0].offsetHeight + 'px';
-
-            for(var i = 0; i < ulList.length; i++){
-                var li = document.createElement('li');
-                if(i == 0){
-                    li.className = 'current';
-                }
-                ol.appendChild(li);
-            }
-
-            window.onresize = function(){
-                ul.style.height = ulList[0].offsetHeight + 'px';
-            }
-        }
-    </script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

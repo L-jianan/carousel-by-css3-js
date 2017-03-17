@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+html,body{
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+#box{
+    position: relative;
+    overflow: hidden;
+}
+#ulList{
+    position: relative;
+}
+#ulList li{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+#olList{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+#olList li{
+    width: 5px;
+    height: 5px;
+    border: 1px solid #ccc;
+    margin: auto 5px;
+    border-radius: 50%;
+    display: inline-block;
+}
+#olList .current{
+    background-color: #fff;
+}
+img {
+    width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    display: block;
+    -ms-interpolation-mode: bicubic;/*为了照顾ie图片缩放失真*/
+}
+.transition{
+    transition: all 0.4s;
+}
